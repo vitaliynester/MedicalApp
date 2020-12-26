@@ -1,0 +1,38 @@
+name: medical_app
+description: A new Flutter project.
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.0
+  flushbar: ^1.10.4
+  flutter_bloc: ^6.1.1
+  equatable: ^1.2.5
+  provider: ^4.3.2+3
+  dio: ^3.0.10
+  shared_preferences: ^0.5.12+4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: CircularStd-Black
+      fonts:
+        - asset: assets/fonts/CircularStd-Black.ttf
+    - family: CircularStd-Book
+      fonts:
+        - asset: assets/fonts/CircularStd-Book.ttf
