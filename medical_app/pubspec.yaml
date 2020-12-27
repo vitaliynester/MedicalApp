@@ -18,6 +18,7 @@ dependencies:
   provider: ^4.3.2+3
   dio: ^3.0.10
   shared_preferences: ^0.5.12+4
+  http: ^0.12.2
 
 dev_dependencies:
   flutter_test:
