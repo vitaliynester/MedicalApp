@@ -13,8 +13,9 @@ class User(Base):
     last_name = db.Column('user_last_name',
                           db.String(200),
                           nullable=False)
-    middle_name = db.Column('user_middle_name',
-                            db.String(200))
+    email = db.Column('user_email',
+                            db.String(200),
+                            nullable=False)
     phone = db.Column('user_phone', 
                       db.String(20),
                       nullable=False)

@@ -33,7 +33,7 @@ def register_user():
         return jsonify({'msg': str(e)})
 
 
-@app.route('/exist_user', methods=['GET'])
+@app.route('/login_user', methods=['GET'])
 def check_exist_user():
     try:
         params = request.args
