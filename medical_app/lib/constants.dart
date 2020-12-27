@@ -3,7 +3,7 @@ import 'dart:typed_data';
 
 import 'package:flutter/cupertino.dart';
 
-String mainUri = "192.168.0.109:5000";
+String mainUri = "188.124.39.8:5000";
 
 Color mainColor = Color(0xFF9B9B9B);
 Color btnColor = Color(0xFF1BB2A7);
