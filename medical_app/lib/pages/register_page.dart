@@ -395,28 +395,36 @@ class _RegisterPageState extends State<RegisterPage> {
                                 SizedBox(
                                   height: 15,
                                 ),
-                                GestureDetector(
-                                  onTap: () {
-                                    var data = {
-                                      'login': loginController.text,
-                                      'password': passwordController.text,
-                                      'phone': phoneNumberController.text,
-                                      'email': emailController.text,
-                                      'first_name': firstNameController.text,
-                                      'last_name': lastNameController.text,
-                                    };
-                                    userBloc.add(
-                                      RegisterUserEvent(data: data),
-                                    );
-                                  },
-                                  child: Container(
-                                    width: 233,
-                                    height: 50,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(25),
-                                      color: btnColor,
-                                      border: Border.all(
-                                        color: borderColor,
+                                Container(
+                                  width: 233,
+                                  height: 50,
+                                  child: TextButton(
+                                    onPressed: () {
+                                      var data = {
+                                        'login': loginController.text,
+                                        'password': passwordController.text,
+                                        'phone': phoneNumberController.text,
+                                        'email': emailController.text,
+                                        'first_name': firstNameController.text,
+                                        'last_name': lastNameController.text,
+                                      };
+                                      userBloc.add(
+                                        RegisterUserEvent(data: data),
+                                      );
+                                    },
+                                    style: ButtonStyle(
+                                      backgroundColor:
+                                          MaterialStateProperty.all<Color>(
+                                              btnColor),
+                                      shape: MaterialStateProperty.all<
+                                          RoundedRectangleBorder>(
+                                        RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(25),
+                                          side: BorderSide(
+                                            color: borderColor,
+                                          ),
+                                        ),
                                       ),
                                     ),
                                     child: Center(
