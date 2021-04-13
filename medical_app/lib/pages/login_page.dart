@@ -183,10 +183,16 @@ class _LoginPageState extends State<LoginPage> {
                                 height: 50,
                                 child: TextButton(
                                   onPressed: () {
-                                    userBloc.add(
-                                      LoginUserEvent(
-                                        login: loginController.text,
-                                        password: passwordController.text,
+                                    // userBloc.add(
+                                    //   LoginUserEvent(
+                                    //     login: loginController.text,
+                                    //     password: passwordController.text,
+                                    //   ),
+                                    // );
+                                    Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => MainPage(),
                                       ),
                                     );
                                   },
