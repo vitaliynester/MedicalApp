@@ -5,10 +5,8 @@ import 'package:medical_app/bloc/user_bloc/user_bloc.dart';
 import 'package:medical_app/bloc/user_bloc/user_event.dart';
 import 'package:medical_app/bloc/user_bloc/user_repository.dart';
 import 'package:medical_app/bloc/user_bloc/user_state.dart';
-import 'package:medical_app/models/user_model.dart';
 import 'package:medical_app/pages/main_page.dart';
 import 'package:medical_app/pages/register_page.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import '../constants.dart';
 
@@ -41,7 +39,6 @@ class _LoginPageState extends State<LoginPage> {
                 if (state is UserErrorState) {
                   errorWidget(state.message);
                 } else if (state is UserLoadedState) {
-                  _saveUserOnDevice(state.user);
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
@@ -181,23 +178,30 @@ class _LoginPageState extends State<LoginPage> {
                               SizedBox(
                                 height: 15,
                               ),
-                              GestureDetector(
-                                onTap: () {
-                                  userBloc.add(
-                                    LoginUserEvent(
-                                      login: loginController.text,
-                                      password: passwordController.text,
-                                    ),
-                                  );
-                                },
-                                child: Container(
-                                  width: 233,
-                                  height: 50,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(25),
-                                    color: btnColor,
-                                    border: Border.all(
-                                      color: borderColor,
+                              Container(
+                                width: 233,
+                                height: 50,
+                                child: TextButton(
+                                  onPressed: () {
+                                    userBloc.add(
+                                      LoginUserEvent(
+                                        login: loginController.text,
+                                        password: passwordController.text,
+                                      ),
+                                    );
+                                  },
+                                  style: ButtonStyle(
+                                    backgroundColor:
+                                        MaterialStateProperty.all<Color>(
+                                            btnColor),
+                                    shape: MaterialStateProperty.all<
+                                        RoundedRectangleBorder>(
+                                      RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(25),
+                                        side: BorderSide(
+                                          color: borderColor,
+                                        ),
+                                      ),
                                     ),
                                   ),
                                   child: Center(
@@ -318,11 +322,5 @@ class _LoginPageState extends State<LoginPage> {
       borderWidth: 2,
       margin: EdgeInsets.all(5),
     )..show(context);
-  }
-
-  _saveUserOnDevice(UserModel userModel) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    prefs.setString('login', userModel.login);
-    prefs.setString('password', userModel.password);
   }
 }
