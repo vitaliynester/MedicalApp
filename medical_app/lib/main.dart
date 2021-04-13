@@ -7,7 +7,6 @@ import 'package:medical_app/bloc/user_bloc/user_state.dart';
 import 'package:medical_app/pages/main_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'models/user_model.dart';
 import 'pages/login_page.dart';
 
 void main() => runApp(MainApp());
@@ -17,6 +16,11 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          brightness: Brightness.light,
+        ),
+      ),
       home: BlocProvider(
         create: (context) => UserBloc(
           repository: UserRepositoryImpl(),
