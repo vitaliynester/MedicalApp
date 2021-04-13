@@ -35,6 +35,43 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        title: Row(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 15),
+              child: IconButton(
+                padding: EdgeInsets.all(0),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                icon: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: backButtonColor,
+                      width: 4,
+                    ),
+                    borderRadius: BorderRadius.circular(60),
+                  ),
+                  child: Center(
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 8.0),
+                      child: Icon(
+                        Icons.arrow_back_ios,
+                        color: backButtonColor,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
       body: Builder(
         builder: (context) {
           return Container(
@@ -401,31 +438,6 @@ class _RegisterPageState extends State<RegisterPage> {
                             ),
                           ),
                         ],
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      left: 20,
-                      top: 30,
-                    ),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: backButtonColor,
-                          width: 4,
-                        ),
-                        borderRadius: BorderRadius.circular(60),
-                      ),
-                      child: IconButton(
-                        icon: Padding(
-                          padding: const EdgeInsets.only(left: 8),
-                          child: Icon(
-                            Icons.arrow_back_ios,
-                            color: backButtonColor,
-                          ),
-                        ),
-                        onPressed: () => Navigator.of(context).pop(),
                       ),
                     ),
                   ),
