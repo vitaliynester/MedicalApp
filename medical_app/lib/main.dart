@@ -90,9 +90,7 @@ class _MyAppState extends State<MyApp> {
         child: CircularProgressIndicator(),
       );
     } else if (state is UserLoadedState) {
-      return MainPage(
-        user: state.user,
-      );
+      return MainPage();
     } else if (state is UserErrorState) {
       return Center(
         child: Text(state.message),
