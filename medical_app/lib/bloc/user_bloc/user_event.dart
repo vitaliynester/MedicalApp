@@ -4,8 +4,8 @@ import 'package:flutter/cupertino.dart';
 abstract class UserEvent extends Equatable {}
 
 class LoginUserEvent extends UserEvent {
-  String login;
-  String password;
+  final String login;
+  final String password;
 
   LoginUserEvent({
     @required this.login,
@@ -17,7 +17,7 @@ class LoginUserEvent extends UserEvent {
 }
 
 class RegisterUserEvent extends UserEvent {
-  Map<String, dynamic> data;
+  final Map<String, dynamic> data;
 
   RegisterUserEvent({@required this.data});
 

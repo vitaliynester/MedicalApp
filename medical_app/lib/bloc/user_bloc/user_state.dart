@@ -15,7 +15,7 @@ class UserLoadingState extends UserState {
 }
 
 class UserLoadedState extends UserState {
-  UserModel user;
+  final UserModel user;
 
   UserLoadedState({@required this.user});
 
@@ -24,7 +24,7 @@ class UserLoadedState extends UserState {
 }
 
 class UserErrorState extends UserState {
-  String message;
+  final String message;
 
   UserErrorState({@required this.message});
 
