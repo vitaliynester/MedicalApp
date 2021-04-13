@@ -96,5 +96,6 @@ class _MyAppState extends State<MyApp> {
         child: Text(state.message),
       );
     }
+    return Center(child: CircularProgressIndicator());
   }
 }

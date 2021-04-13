@@ -2,7 +2,6 @@ import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:medical_app/bloc/user_bloc/user_bloc.dart';
-import 'package:medical_app/bloc/user_bloc/user_event.dart';
 import 'package:medical_app/bloc/user_bloc/user_repository.dart';
 import 'package:medical_app/bloc/user_bloc/user_state.dart';
 import 'package:medical_app/pages/main_page.dart';
@@ -19,6 +18,7 @@ class _LoginPageState extends State<LoginPage> {
   TextEditingController loginController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
+  // ignore: close_sinks
   UserBloc userBloc;
 
   @override
