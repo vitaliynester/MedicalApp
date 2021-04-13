@@ -152,245 +152,35 @@ class _RegisterPageState extends State<RegisterPage> {
                                     ),
                                   ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                    left: 20,
-                                    right: 20,
-                                  ),
-                                  child: TextField(
-                                    cursorColor: mainColor,
-                                    controller: firstNameController,
-                                    decoration: InputDecoration(
-                                      hintText: "Имя",
-                                      hintStyle: TextStyle(
-                                        fontSize: 15,
-                                        fontFamily: "CircularStd-Book",
-                                      ),
-                                      hoverColor: mainColor,
-                                      fillColor: mainColor,
-                                      enabledBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: mainColor,
-                                        ),
-                                      ),
-                                      focusedBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: mainColor,
-                                        ),
-                                      ),
-                                      border: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: mainColor,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
+                                createTextField(
+                                  firstNameController,
+                                  "Имя",
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                    left: 20,
-                                    right: 20,
-                                  ),
-                                  child: TextField(
-                                    cursorColor: mainColor,
-                                    controller: lastNameController,
-                                    decoration: InputDecoration(
-                                      hintText: "Фамилия",
-                                      hintStyle: TextStyle(
-                                        fontSize: 15,
-                                        fontFamily: "CircularStd-Book",
-                                      ),
-                                      hoverColor: mainColor,
-                                      fillColor: mainColor,
-                                      enabledBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: mainColor,
-                                        ),
-                                      ),
-                                      focusedBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: mainColor,
-                                        ),
-                                      ),
-                                      border: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: mainColor,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
+                                createTextField(
+                                  lastNameController,
+                                  "Фамилия",
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                    left: 20,
-                                    right: 20,
-                                  ),
-                                  child: TextField(
-                                    cursorColor: mainColor,
-                                    controller: phoneNumberController,
-                                    decoration: InputDecoration(
-                                      hintText: "Номер телефона",
-                                      hintStyle: TextStyle(
-                                        fontSize: 15,
-                                        fontFamily: "CircularStd-Book",
-                                      ),
-                                      hoverColor: mainColor,
-                                      fillColor: mainColor,
-                                      enabledBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: mainColor,
-                                        ),
-                                      ),
-                                      focusedBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: mainColor,
-                                        ),
-                                      ),
-                                      border: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: mainColor,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
+                                createTextField(
+                                  phoneNumberController,
+                                  "Номер телефона",
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                    left: 20,
-                                    right: 20,
-                                  ),
-                                  child: TextField(
-                                    cursorColor: mainColor,
-                                    controller: loginController,
-                                    decoration: InputDecoration(
-                                      hintText: "Логин",
-                                      hintStyle: TextStyle(
-                                        fontSize: 15,
-                                        fontFamily: "CircularStd-Book",
-                                      ),
-                                      hoverColor: mainColor,
-                                      fillColor: mainColor,
-                                      enabledBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: mainColor,
-                                        ),
-                                      ),
-                                      focusedBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: mainColor,
-                                        ),
-                                      ),
-                                      border: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: mainColor,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
+                                createTextField(
+                                  loginController,
+                                  "Логин",
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                    left: 20,
-                                    right: 20,
-                                  ),
-                                  child: TextField(
-                                    cursorColor: mainColor,
-                                    controller: emailController,
-                                    decoration: InputDecoration(
-                                      hintText: "Электронная почта",
-                                      hintStyle: TextStyle(
-                                        fontSize: 15,
-                                        fontFamily: "CircularStd-Book",
-                                      ),
-                                      hoverColor: mainColor,
-                                      fillColor: mainColor,
-                                      enabledBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: mainColor,
-                                        ),
-                                      ),
-                                      focusedBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: mainColor,
-                                        ),
-                                      ),
-                                      border: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: mainColor,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
+                                createTextField(
+                                  emailController,
+                                  "Электронная почта",
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                    left: 20,
-                                    right: 20,
-                                  ),
-                                  child: TextField(
-                                    cursorColor: mainColor,
-                                    controller: passwordController,
-                                    obscureText: true,
-                                    decoration: InputDecoration(
-                                      hintText: "Пароль",
-                                      hintStyle: TextStyle(
-                                        fontSize: 15,
-                                        fontFamily: "CircularStd-Book",
-                                      ),
-                                      hoverColor: mainColor,
-                                      fillColor: mainColor,
-                                      enabledBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: mainColor,
-                                        ),
-                                      ),
-                                      focusedBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: mainColor,
-                                        ),
-                                      ),
-                                      border: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: mainColor,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
+                                createTextField(
+                                  passwordController,
+                                  "Пароль",
+                                  true,
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                    left: 20,
-                                    right: 20,
-                                  ),
-                                  child: TextField(
-                                    cursorColor: mainColor,
-                                    controller: repeatPasswordController,
-                                    obscureText: true,
-                                    decoration: InputDecoration(
-                                      hintText: "Подтвердите пароль",
-                                      hintStyle: TextStyle(
-                                        fontSize: 15,
-                                        fontFamily: "CircularStd-Book",
-                                      ),
-                                      hoverColor: mainColor,
-                                      fillColor: mainColor,
-                                      enabledBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: mainColor,
-                                        ),
-                                      ),
-                                      focusedBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: mainColor,
-                                        ),
-                                      ),
-                                      border: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                          color: mainColor,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
+                                createTextField(
+                                  repeatPasswordController,
+                                  "Подтвердите пароль",
+                                  true,
                                 ),
                                 SizedBox(
                                   height: 15,
@@ -454,6 +244,46 @@ class _RegisterPageState extends State<RegisterPage> {
             ),
           );
         },
+      ),
+    );
+  }
+
+  Widget createTextField(
+      TextEditingController editingController, String hintTextString,
+      [bool obscureTextForPassword]) {
+    return Padding(
+      padding: const EdgeInsets.only(
+        left: 20,
+        right: 20,
+      ),
+      child: TextField(
+        cursorColor: mainColor,
+        obscureText: obscureTextForPassword != null ?? obscureTextForPassword,
+        controller: editingController,
+        decoration: InputDecoration(
+          hintText: hintTextString,
+          hintStyle: TextStyle(
+            fontSize: 15,
+            fontFamily: "CircularStd-Book",
+          ),
+          hoverColor: mainColor,
+          fillColor: mainColor,
+          enabledBorder: UnderlineInputBorder(
+            borderSide: BorderSide(
+              color: mainColor,
+            ),
+          ),
+          focusedBorder: UnderlineInputBorder(
+            borderSide: BorderSide(
+              color: mainColor,
+            ),
+          ),
+          border: UnderlineInputBorder(
+            borderSide: BorderSide(
+              color: mainColor,
+            ),
+          ),
+        ),
       ),
     );
   }
